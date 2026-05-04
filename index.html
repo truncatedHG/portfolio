@@ -1,31 +1,80 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aldrian Diaz | Web Portfolio</title>
         <link rel="icon" href=".\images\truncated-octahedron.png">
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+        <style>
+            body {
+              background-image: url(images\page-background.jpg); 
+              
+              /* Optional settings for a better look */
+              background-repeat: no-repeat;  /* Prevents the image from tiling */
+              background-size: cover;       /* Scales image to fill the entire screen */
+              background-attachment: fixed; /* Keeps image still while you scroll */
+              background-position: center;  /* Centers the image */
+            }
+          </style>
     </head>
-    <body>
-
-        <nav class="navbar">
-            <ul class="navlinks">
-            <li><a href="about-me.html">About Me</a></li>
-            <li><a href="certifications.html">Certifications</a></li>    
-            <li><a href="tech-stack.html">Tech Stack</a></li>    
-        </ul>
-        </nav>
+    <body id="index-body">
         
-        <br><br>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+          
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                  Home
+                </a>
+          
+                <a class="navbar-item" href="about-me.html">
+                  About Me
+                </a>
 
-        <h1>Aldrian Diaz</h1>
+                <a class="navbar-item" href="certifications.html">
+                    Certifications
+                  </a>
+
+                <a class="navbar-item" href="tech-stack.html">
+                    Tech Stack
+                </a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
         
+       
 
-        <br><br>
-
-        <img id="img1" src=".\images\truncated-octahedron.png" width="150" height="150" alt="A self portrait">
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+       
+          <div class="has-text-centered"> <h1 class="is-size-1 name">Aldrian Diaz</h1>
+            <br><br>
+            <img src=".\images\truncated-octahedron.png" width="150" height="150" alt="A self portrait">
+          </div>
+       
+       
     </body>
 </html>
+

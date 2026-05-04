@@ -1,3 +1,10 @@
-body {
-    background-image: url(C:\Users\202400817\Desktop\portfolio\images\page-background.jpg);
+
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
 }
