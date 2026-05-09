@@ -8,6 +8,7 @@
         <link rel="icon" href=".\images\truncated-octahedron.png">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+        <script src="script/script.js" defer></script>
 </head>
 <body>
 
@@ -63,31 +64,40 @@
 
     <div class="has-text-centered">
       <h1 class="is-size-1 name">Languages</h1>
-
       </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+      <div class="figure-container">
+        <figure>
+          <img src="images/c.png"  alt="C Programming Language">
+          <figcaption>C Programming Language</figcaption>
+        </figure>
 
-// Get all "navbar-burger" elements
-const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        <figure>
+          <img src="images/sql.png" alt="SQL Database">
+          <figcaption>SQL</figcaption>
+        </figure>
 
-// Add a click event on each of them
-$navbarBurgers.forEach( el => {
-  el.addEventListener('click', () => {
+        <figure>
+          <img src="images/html.png"  alt="HTML Logo">
+          <figcaption>HTML</figcaption>
+        </figure>
 
-    // Get the target from the "data-target" attribute
-    const target = el.dataset.target;
-    const $target = document.getElementById(target);
+        <figure>
+          <img src="images/css.png"  alt="CSS Logo">
+          <figcaption>CSS</figcaption>
+        </figure>
 
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    el.classList.toggle('is-active');
-    $target.classList.toggle('is-active');
+        <figure>
+          <img src="images/java.png" alt="Java Logo">
+          <figcaption>Java Programming Lanauge</figcaption>
+        </figure>
 
-  });
-});
+        <figure>
+          <img src="images/javascript.png" alt="Javascript Logo">
+          <figcaption>Javascript</figcaption>
+        </figure>
+      </div>
 
-});
-       </script>
+   
 </body>
 </html>

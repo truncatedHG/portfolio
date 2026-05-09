@@ -24,3 +24,26 @@
     background-position: center;
     background-attachment: fixed;
   }
+
+  .figure-container {
+    display: flex;       
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+
+  }
+
+  .figure-container img{
+    width: 30%;
+    height: auto;
+  }
+  
+  figure {
+    margin: 0;          
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;    
+    height: auto;
+  }
