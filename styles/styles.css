@@ -1,5 +1,18 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Open%20Sans:wght@400;500;700&display=swap');
 
+/* root stuff */
+:root {
+  --bulma-family-primary: 'Google Sans', 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Google Sans', 'Roboto', sans-serif !important;
+  color: #8e43a1 !important;
+}
+
+
+/* index */
 .name {
     display: flex;
     align-items: center;
@@ -9,6 +22,8 @@
     text-align: center;
 }
 
+
+/* navbar */
 .navbar-menu {
     position: absolute;
     width: 100%;
@@ -16,8 +31,44 @@
     z-index: 9999;
   }
 
+  .navbar-item {
+    font-size: 1.5rem;   /* makes the text bigger */
+    padding: 0.75rem 1rem; /* increases clickable area */
+  }
+
+  .navbar {
+    min-height: 4rem; /* default bulma is 3.25rem, increase this */
+    padding: 1rem;
+  }
+
+  .navbar-burger {
+    height: 100%;
+    width: 4rem;
+  }
+
+  .navbar,
+  .navbar-menu,
+  .navbar-brand,
+  .navbar-start,
+  .navbar-end,
+  .navbar-center {
+  background-color: #8e43a1 !important;
+  }
+
+  .navbar-item:hover,
+  .navbar-item:focus,
+  .navbar-link:hover {
+  background-color: #8e43a1 !important;
+  color: rgba(154, 138, 155, 0.945) !important;
+  }
+
+  .navbar-item,
+  .navbar-link {
+  color: rgba(225, 205, 226, 0.945) !important;
+  }
+
   body {
-    background-image: url("https://images.unsplash.com/photo-1753837738655-538ad235ce41?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-color: rgba(225, 205, 226, 0.945);
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,21 +77,29 @@
   }
 
   .figure-container {
-    display: flex;       
+    display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content: flex-start;
-
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
   }
 
-  .figure-container img{
-    width: 30%;
-    height: auto;
+  .figure-container figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  figure {
-    margin: 0;          
+
+  .figure-container figure img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .figure-container figcaption {
     text-align: center;
+    margin-top: 8px;
   }
   
   img {
