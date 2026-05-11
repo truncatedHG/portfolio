@@ -11,88 +11,141 @@
         <script src="script/script.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-      
-          </a>
-      
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navMenu" class="navbar-menu">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-start is-flex-grow-1 is-justify-content-center">
-            <a class="navbar-item" href="index.html">
-              Home
-            </a>
-      
-            <a class="navbar-item" href="about-me.html">
-              About Me
-            </a>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
 
-            <a class="navbar-item" href="certifications.html">
-                Certifications
-              </a>
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start is-flex-grow-1 is-justify-content-center">
+        <a class="navbar-item" href="index.html">
+          Home
+        </a>
+  
+        <a class="navbar-item" href="about-me.html">
+          About Me
+        </a>
 
-            <a class="navbar-item" href="tech-stack.html">
-                Tech Stack
-            </a>
-      
-            
+        <a class="navbar-item" href="certifications.html">
+            Certifications
+          </a>
 
-              </div>
-            </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              </div>
-            </div>
+        <a class="navbar-item" href="tech-stack.html">
+            Tech Stack
+        </a>
           </div>
         </div>
-      </nav>
-    <br>
+  
+      <div class="navbar-end">
+        
+  </nav>
+
+
+    <h1 class="is-size-1 has-text-centered content">Certifications</h1>
 
     <div class="has-text-centered">
-      <h1 class="is-size-1 name">Certifications</h1>
+      <div class="figure-container">
+        <figure class="content">
 
-      <a href="https://www.credly.com/earner/earned/badge/5b4ed36d-0840-46e6-8f10-db48d802ade8">
-        <img src="images\python-essentials.png" style="padding: 20px;" width="200" height="200" alt="Python Essentials Certificate">
-      </a>
+          <button class="image" data-src="images\python-certificate.jpg">
+            <img src="images\python-essentials.png" style="padding: 20px;" width="200" height="200" alt="Python Essentials Certificate">
+          </button>
 
-      <a href="https://www.credly.com/badges/7a3a72de-71d7-4fd7-bf17-36c9a3fc52de/public_url">
-        <img src="images\networking-basics.png" style="padding: 20px;" width="200" height="200" alt="Netorking Basics Certificate">
-      </a>
+          <figcaption>
+            <a href="https://www.credly.com/badges/7a3a72de-71d7-4fd7-bf17-36c9a3fc52de/public_url" style="color: #8e43a1;" target="_blank">Python Essentials</a>
+          </figcaption>
 
-      <a href="https://www.credly.com/badges/10554536-90af-4445-bf61-2d4dbfcda45a/public_url">
-        <img src="images\msword-specialist.png" style="padding: 20px;" width="200" height="200" alt="Microsoft Word 2019 Specialist Certificate">
-      </a>
+          <dialog id="img-dialog">
+            <button id="close-btn">✕</button>
+            <img id="dialog-img" src="" alt="Python Essentials Certificate">
+            <p id="dialog-caption">Python Essentials Certificate</p>
+          </dialog>
 
-      <a href="https://www.credly.com/badges/5cb94b82-d417-496b-ae8c-d1c2a088331a/public_url">
-        <img src="images\msexcel-specialist.png" style="padding: 20px;" width="200" height="200" alt="Microsoft Excel Specialist Certificate">
-      </a>
+        </figure>
+        
 
-      <a href="https://www.credly.com/badges/4289682b-90ef-4001-b34d-859bfbfc6e59/public_url">
-        <img src="images\cessentials.png" style="padding: 20px;" width="200" height="200" alt="C Essentials Certificate">
-      </a>
+        <figure class="content">
 
+          <button class="image" data-src="images\networking-certificate.jpg">
+          <img src="images\networking-basics.png" style="padding: 20px;" width="200" height="200" alt="Netorking Basics Certificate">
+          </button>
+
+          <dialog id="img-dialog">
+            <button id="close-btn">✕</button>
+            <img id="dialog-img" src="" alt="">
+            <p id="dialog-caption"></p>
+          </dialog>
+
+          <figcaption>
+            <a href="https://www.credly.com/badges/7a3a72de-71d7-4fd7-bf17-36c9a3fc52de/public_url" style="color: #8e43a1;" target="_blank">Networking Basics</a>
+          </figcaption>
+        </figure>
+
+        <figure class="content">
+
+          <button class="image" data-src="images\msword-certificate.jpg">
+          <img src="images\msword-specialist.png" style="padding: 20px;" width="200" height="200" alt="Microsoft Word 2019 Specialist Certificate">
+          </button>
+
+          <figcaption>
+            <a href="https://www.credly.com/badges/10554536-90af-4445-bf61-2d4dbfcda45a/public_url" style="color: #8e43a1;" target="_blank">Microsoft Word Specialist</a>
+          </figcaption>
+
+          <dialog id="img-dialog">
+            <button id="close-btn">✕</button>
+            <img id="dialog-img" src="" alt="">
+            <p id="dialog-caption"></p>
+          </dialog>
+
+        </figure>
+
+        <figure class="content">
+
+          <button class="image" data-src="images\excel-certificate.jpg">
+          <img src="images\msexcel-specialist.png" style="padding: 20px;" width="200" height="200" alt="Microsoft Excel Specialist Certificate">
+          </button>
+
+          <figcaption>
+            <a href="https://www.credly.com/badges/5cb94b82-d417-496b-ae8c-d1c2a088331a/public_url" style="color: #8e43a1;" target="_blank">Microsoft Excel Specialist</a>
+          </figcaption>
+
+          <dialog id="img-dialog">
+            <button id="close-btn">✕</button>
+            <img id="dialog-img" src="" alt="">
+            <p id="dialog-caption"></p>
+          </dialog>
+
+        </figure>
+
+        <figure class="content">
+
+          <button class="image" data-src="images\cessentials-certificate.jpg">
+            <img src="images\cessentials.png" style="padding: 20px;" width="200" height="200" alt="C Essentials Certificate">
+          </button>
+          
+          <figcaption>
+            <a href="https://www.credly.com/badges/4289682b-90ef-4001-b34d-859bfbfc6e59/public_url" style="color: #8e43a1;" target="_blank">C Essentials</a>
+          </figcaption>
+
+          <dialog id="img-dialog">
+            <button id="close-btn">✕</button>
+            <img id="dialog-img" src="" alt="">
+            <p id="dialog-caption"></p>
+          </dialog>
+
+        </figure>
       </div>
+    </div>
 
 
 </body>

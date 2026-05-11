@@ -9,17 +9,21 @@
 body {
   font-family: 'Google Sans', 'Roboto', sans-serif !important;
   color: #8e43a1 !important;
+  background-color: rgba(225, 205, 226, 0.945);
+  min-height: 100vh;
+
+
 }
 
 
 /* index */
 .name {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     margin-left: 100px;
     margin-right: 100px;
-    text-align: center;
+    
 }
 
 
@@ -67,18 +71,9 @@ body {
   color: rgba(225, 205, 226, 0.945) !important;
   }
 
-  body {
-    background-color: rgba(225, 205, 226, 0.945);
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
   .figure-container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
@@ -105,4 +100,64 @@ body {
   img {
     max-width: 100%;    
     height: auto;
+  }
+
+  /* dialog */
+
+  button.image {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  button.image:hover img {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+  
+  dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform-origin: center center;
+    object-fit: contain;
+    max-width: 900px;
+  }
+  
+  dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+  }
+  
+  #close-btn {
+    display: block;
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  #dialog-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 50%;
+  }
+  
+  #dialog-caption {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #444;
   }

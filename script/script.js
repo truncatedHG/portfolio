@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       translateY: [-20, 0],
       opacity: [0, 1],
       duration: 1200,
-      delay: anime.stagger(300),
+      delay: anime.stagger(100),
       easing: 'easeOutElastic'
     });
   
@@ -36,6 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: [0, 1],
       duration: 1200,
       delay: anime.stagger(200),
+      easing: 'easeOutElastic'
+    });
+
+    anime({
+      targets: '.content',
+      translateY: [100, 0],
+      opacity: [0, 1],
+      duration: 1200,
+      delay: anime.stagger(100),
       easing: 'easeOutElastic'
     });
   
@@ -59,5 +68,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
-  
+
+    const dialog = document.getElementById('img-dialog');
+
+    function openDialog(btn) {
+      const img = btn.querySelector('img');
+      document.getElementById('dialog-img').src = btn.dataset.src;
+      document.getElementById('dialog-img').alt = btn.dataset.caption;
+      document.getElementById('dialog-caption').textContent = btn.dataset.caption;
+    
+      dialog.showModal();
+    
+      anime({
+        targets: '#img-dialog',
+        opacity: [0, 1],
+        scale: [0.8, 1],
+        duration: 300,
+        easing: 'easeOutBack'
+      });
+    }
+    
+    function closeDialog() {
+      anime({
+        targets: '#img-dialog',
+        opacity: [1, 0],
+        scale: [1, 0.8],
+        duration: 200,
+        easing: 'easeInQuad',
+        complete: () => dialog.close()
+      });
+    }
+    
+    document.querySelectorAll('.image').forEach(btn => {
+      btn.addEventListener('click', () => openDialog(btn));
+    });
+    
+    document.getElementById('close-btn').addEventListener('click', closeDialog);
+    
+    dialog.addEventListener('click', e => {
+      if (e.target === dialog) closeDialog();
+    });
+    
+    dialog.addEventListener('cancel', e => {
+      e.preventDefault();
+      closeDialog();
+    });
+
+
   });
